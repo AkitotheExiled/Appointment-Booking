@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
+import './styles/ServiceCard.css';
+import './styles/DateCard.css';
+import ServiceCard from './ServiceCard';
+import DateCard from './DateCard';
 
 function App() {
+  let prop = {title: "Service Title", time: "30 minutes", insig: "$", price: "10"};
+  let dateProp = {month: "Aug", day: "WEDNESDAY", numberDay: 9};
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DateCard props={dateProp} />
+      <ServiceCard props={prop} />
     </div>
   );
 }

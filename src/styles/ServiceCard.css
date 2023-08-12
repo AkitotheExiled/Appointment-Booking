@@ -1,0 +1,90 @@
+.ServiceCard {
+    width: 340px;
+    height: 61px;
+    border-radius: 8px;
+    display: flex;
+    background-color: #D9D9D9;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ServiceCard__tt {
+    display: flex;
+    flex-direction: column;
+    margin: 12px 0 15px 16px;
+    font-size: 12px;
+}
+
+.ServiceCard__price {
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0 16px 0 0;
+}
+
+.ServiceCard__insignia {
+    font-size: 12px;
+    margin:-15px 2px 0 auto;
+}
+
+.ServiceCard__checkMark {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    height: 25px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.ServiceCard__checkMark input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkMark__checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #848484;
+    border-radius: 50%;
+}
+
+.ServiceCard__checkMark:hover input ~ .checkMark__checkmark {
+    background-color: #4E4E4E;
+}
+
+.ServiceCard__checkMark input:checked ~ .checkMark__checkmark {
+    background-color: #1a1a1a;
+}
+
+
+.checkMark__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+.ServiceCard__checkMark input:checked ~ .checkMark__checkmark:after {
+    display: block;
+}
+
+.ServiceCard__checkMark .checkMark__checkmark:after {
+    left: 9px;
+    top: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgb(255, 0, 0);
+}
+
+.secondary {
+    color: #5F5F5F;
+}
