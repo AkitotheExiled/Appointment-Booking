@@ -1,0 +1,25 @@
+.TimeButton {
+    height: 35px;
+    width: 80px;
+    border-radius: 32px;
+    color: black;
+    border: 1px solid black;
+    font-size: 12px;
+}
+
+.TimeButton__time {
+    text-align:center;
+    margin: 12px;
+}
+
+.TimeButton:hover {
+    font-weight: bold;
+    background-color: grey;
+    color: white;
+}
+
+.--selected {
+    font-weight: bold;
+    background-color: black;
+    color: white;
+}
